@@ -1,0 +1,17 @@
+{
+  "name": "jquery_test",
+  "authors": [
+    "Kyu Won Shim <skw1105@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
