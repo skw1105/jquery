@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+	
+</style>
+<script>
+$(function() {
+	console.log($('#male').data("drop")); // abc출력
+	
+	$('#male').change(function() {
+		$('#military').prop('disabled', !$(this).prop('checked'));
+		
+		$('p').html(
+		'attr : ' + $(this).attr('checked') + '<br />' + //attr로 읽으면 제대로 안나온다. 항상 checked로 나옴
+		'prop : ' + $(this).prop('checked') + '<br />' +
+		'is : ' + $(this).is(':checked') + '<br />');
+	});
+});
+</script>
+</head>
+
+<body>
+	<label for="male">남자</label>
+	<input type="checkbox" id="male" data-drop="abc" checked /><br/>
+	
+	<label for="male">군필여부</label>
+	<input type="checkbox" id="military" checked /><br/>
+	
+	<hr />
+	<p></p>
+</body>
+</html>
